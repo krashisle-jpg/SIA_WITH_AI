@@ -161,6 +161,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $conn->commit();
 
+            // Flash message shown once on the dashboard
+            $_SESSION['success_message'] = "Your product \"" . $product . "\" was posted successfully!";
+
             header("Location: farmer.php");
             exit();
 
